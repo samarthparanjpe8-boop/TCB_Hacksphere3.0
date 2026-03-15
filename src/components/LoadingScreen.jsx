@@ -5,11 +5,24 @@ const LoadingScreen = ({ onEnter }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [stars, setStars] = useState(0);
 
-  const slides = [
-    '/slide1.webp',
-    '/slide2.webp',
-    '/slide3.webp'
-  ];
+  const getSlides = () => {
+    // Basic check for portrait or narrow devices
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    if (isMobile) {
+      return [
+        '/slide1-phone.webp',
+        '/slide2-phone.webp',
+        '/slide3-phone.webp'
+      ];
+    }
+    return [
+      '/slide1.webp',
+      '/slide2.webp',
+      '/slide3.webp'
+    ];
+  };
+
+  const slides = getSlides();
 
   useEffect(() => {
     if (phase === 'slideshow') {

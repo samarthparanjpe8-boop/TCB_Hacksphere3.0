@@ -11,8 +11,8 @@ const Timeline = ({ id }) => {
 
   return (
     <section id={id} className="wavy-timeline-section">
-      <p className="section-label align-center">/ V.C.P.D. DATABASE</p>
-      <h2 className="section-title align-center text-white">THE WANTED TIMELINE</h2>
+      <p className="section-label align-center reveal">/ V.C.P.D. DATABASE</p>
+      <h2 className="section-title align-center text-white reveal">THE WANTED TIMELINE</h2>
 
       <div className="wavy-board">
         {/* Wavy SVG path running through the middle */}

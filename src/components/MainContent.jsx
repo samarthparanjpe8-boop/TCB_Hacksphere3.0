@@ -39,10 +39,10 @@ const MainContent = () => {
       </header>
 
       <div className="sections-container">
-        <div className="reveal"><About id="about" /></div>
-        <div className="reveal"><Timeline id="timeline" /></div>
-        <div className="reveal"><Domains id="domains" /></div>
-        <div className="reveal"><Judges id="judges" /></div>
+        <About id="about" />
+        <Timeline id="timeline" />
+        <Domains id="domains" />
+        <Judges id="judges" />
       </div>
       
       <Footer />

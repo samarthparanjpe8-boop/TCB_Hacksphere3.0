@@ -31,8 +31,8 @@ const Domains = ({ id }) => {
 
   return (
     <section id={id} className="domains-section">
-      <p className="section-label align-center">/ BATTLEGROUNDS</p>
-      <h2 className="section-title align-center text-white">DOMAINS</h2>
+      <p className="section-label align-center reveal">/ BATTLEGROUNDS</p>
+      <h2 className="section-title align-center text-white reveal">DOMAINS</h2>
       
       <div className="domains-grid">
         {domainsList.map((domain) => (

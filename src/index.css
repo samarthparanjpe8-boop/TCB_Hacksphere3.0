@@ -1,12 +1,25 @@
 :root {
-  --neon-pink: #FF0099;    /* Vibrant magenta from neon signs */
-  --neon-cyan: #00E5FF;    /* Electric cyan from reflections and sky */
-  --dark-bg: #2d142c;      /* Deep purple */
-  --panel-bg: rgba(60, 27, 64, 0.85); /* Deep purple transparent panel */
-  --text-main: #fdf6e3;    /* Soft off-white */
-  --text-muted: #ffba7a;   /* Peach/orange */
-  --accent-gold: #FFC107;  /* Amber gold from sunset skies */
-  --accent-orange: #f074a6; /* Deep pink */
+  /* New Hex Codes from User */
+  --c-pink: #C81C74;
+  --c-magenta: #B61F76;
+  --c-purple-dark: #3F1F55;
+  --c-neon-pink: #E23A73;
+  --c-orange-red: #F36B45;
+  --c-orange: #F89b3E;
+  --c-gold-yellow: #F8D35A;
+  --c-pale-yellow: #FFE27A;
+  --c-navy-dark: #0F0E2B;
+  --c-navy-light: #1A123A;
+
+  /* Mapped to previous variable names to minimize breakage initially */
+  --neon-pink: var(--c-neon-pink);
+  --neon-cyan: var(--c-pale-yellow); /* Replaced cyan with pale yellow for now */
+  --dark-bg: var(--c-navy-dark);
+  --panel-bg: var(--c-navy-light);
+  --text-main: #fdf6e3;
+  --text-muted: var(--c-gold-yellow);
+  --accent-gold: var(--c-orange);
+  --accent-orange: var(--c-orange-red);
 }
 
 * {
@@ -16,7 +29,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--dark-bg);
   color: var(--text-main);
   overflow-x: hidden;
@@ -24,7 +37,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Anton', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -37,7 +50,7 @@ a {
 
 button {
   cursor: pointer;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Anton', sans-serif;
   text-transform: uppercase;
   border: none;
   background: transparent;
@@ -101,7 +114,7 @@ button {
 .gta-bg {
   min-height: 100vh;
   /* Sunset gradient base mimicking the wallpaper */
-  background: linear-gradient(135deg, #4a2c7d 0%, #d16b9b 50%, #ffa057 100%);
+  background: linear-gradient(135deg, var(--c-navy-dark) 0%, var(--c-purple-dark) 50%, var(--c-pink) 100%);
   background-attachment: fixed;
 }
 
@@ -117,13 +130,5 @@ button {
   z-index: 0;
 }
 
-.gta-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.2) 2px, rgba(0, 0, 0, 0.2) 4px);
-  pointer-events: none;
-}
+
+

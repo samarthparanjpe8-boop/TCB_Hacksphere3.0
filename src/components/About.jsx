@@ -4,7 +4,7 @@ import { Users, Zap, Trophy, Building } from 'lucide-react';
 const About = ({ id }) => {
   return (
     <section id={id} className="about-section">
-      <div className="about-content">
+      <div className="about-content reveal">
         <p className="section-label">/ ABOUT THE EVENT</p>
         <h2 className="section-title text-white">WHAT IS HACKSPHERE?</h2>
         
@@ -17,22 +17,22 @@ const About = ({ id }) => {
       </div>
       
       <div className="stats-grid">
-        <div className="stat-card">
+        <div className="stat-card reveal">
           <Users className="stat-icon text-gold" size={24} />
           <h3 className="stat-value glow-gold">1000+</h3>
           <p className="stat-label">PARTICIPANTS</p>
         </div>
-        <div className="stat-card">
+        <div className="stat-card reveal">
           <Zap className="stat-icon text-gold" size={24} />
           <h3 className="stat-value glow-gold">4+</h3>
           <p className="stat-label">DOMAINS</p>
         </div>
-        <div className="stat-card">
+        <div className="stat-card reveal">
           <Trophy className="stat-icon text-gold" size={24} />
           <h3 className="stat-value glow-gold">₹10K</h3>
           <p className="stat-label">PRIZE POOL</p>
         </div>
-        <div className="stat-card">
+        <div className="stat-card reveal">
           <Building className="stat-icon text-gold" size={24} />
           <h3 className="stat-value glow-gold">50+</h3>
           <p className="stat-label">COLLEGES</p>
